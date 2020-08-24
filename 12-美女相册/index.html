@@ -74,9 +74,9 @@
 
     <script src="../jquery-1.12.4.js"></script>
     <script>
-        $(function () {
+        $(function (e) {
             // 点击a，换大图，换文字
-
+            e.preventDefault();
             $("#imagegallery a").click(function () {
                 
                 // console.log( $(this).attr("href") );     // 获取
@@ -86,7 +86,7 @@
                 $("#des").text( $(this).attr("title") );
 
                 // 阻止a链接跳转
-                return false;
+                // return false;
             })
 
         });
